@@ -1,0 +1,43 @@
+@mixin customFontsMixinAliasGenerator($className, $propertyName, $start, $end, $step, $suffix) {
+  @for $i from $start through $end {
+    $size: clamp(#{$i}#{$suffix}, 1rem, 2rem);
+    .#{$className}#{$i} {
+      #{$propertyName}: $size !important;
+    }
+  }
+}
+
+
+@mixin customMixinAliasGenerator($className, $propertyName, $start, $end, $step, $suffix) {
+  @for $i from $start through $end {
+     $size: #{$i}#{$suffix};
+    .#{$className}#{$i} {
+      #{$propertyName}: $size !important;
+    }
+  }
+}
+
+
+
+
+
+@mixin customButtonAliasGenerator($className, $propertyName, $start, $end, $step, $suffix) {
+  @for $i from $start through $end {
+    .#{$className}#{$i} {
+
+      @if $className == 'btn-green-'{
+        #{$propertyName}: unquote('rgb(0,#{$i},0) !important');
+        color:white !important;
+      }
+      @if $className == 'btn-red-' {
+        #{$propertyName}: unquote('rgb(#{$i},0,0) !important');
+        color:white !important;
+      }
+      @if $className == 'btn-blue-'{
+         #{$propertyName}: unquote('rgb(0,0,#{$i}) !important');
+         color:white !important;
+      }
+
+    }
+  }
+}

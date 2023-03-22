@@ -1,0 +1,5 @@
+@import './mixin';
+
+@include customButtonAliasGenerator('btn-green-','background',0,255,0,1);
+@include customButtonAliasGenerator('btn-red-','background',0,255,0,1);
+@include customButtonAliasGenerator('btn-blue-','background',0,255,0,1);

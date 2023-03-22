@@ -1,0 +1,34 @@
+<nav class="navbar">
+  <div class="navbar__container">
+    <div class="navbar__container__brand"   [routerLink]="appPathEnums.LANDING_PAGE" >Logo</div>
+    <ul class="navbar__container__menu">
+      <li class="navbar__container__menu-item">
+        <a
+          class="fsr-12"
+          [routerLink]="appPathEnums.WORK"
+          routerLinkActive="active-link"
+        >
+          Work
+        </a>
+      </li>
+      <li class="navbar__container__menu-item">
+        <a class="fsr-12" [routerLink]="appPathEnums.ABOUT" routerLinkActive="active-link">
+          About
+        </a>
+      </li>
+      <li class="navbar__container__menu-item">
+        <a class="fsr-12" [routerLink]="appPathEnums.PRODUCTS" routerLinkActive="active-link">
+          Products
+        </a>
+      </li>
+
+      <li class="navbar__container__menu-item">
+        <a class="fsr-12" [routerLink]="appPathEnums.BLOG" routerLinkActive="active-link">
+          Blog
+        </a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+Work About Products Blog
