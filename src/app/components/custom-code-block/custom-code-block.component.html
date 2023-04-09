@@ -1,0 +1,8 @@
+ <p class="fsr-30">{{title}}</p>
+     <div class="fsr-20 desc">
+         {{desc}}
+     </div>
+
+     <div  class="code_block mt-20">
+       <pre ><code *ngIf="code" #codeRef  class="javascript" [title]="title"  [textContent]="code"></code></pre>
+ </div>

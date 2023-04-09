@@ -3,7 +3,9 @@ export enum AppPathEnums {
   PAGE_NOT_FOUND='page_not_found',
   LANDING_PAGE='landing-page',
   ABOUT='about',
-  WORK='work',
+  HOME='home',
   BLOG='blog',
-  PRODUCTS='products'
+  PRODUCTS='products',
+  CONDITIONAL_OPERATOR=  "conditional-operators",
+  COMBINATION_OPERATOR='combination-operators'
 }

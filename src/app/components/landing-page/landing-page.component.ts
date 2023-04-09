@@ -14,19 +14,6 @@ import { easeBounce, easeCircleIn, easeElasticIn, easeSinInOut } from 'd3'
   styleUrls: ['./landing-page.component.scss'],
 })
 export class LandingPageComponent implements AfterContentInit {
-  @ViewChild('landingVisual', { static: true }) landingVisual!: ElementRef<
-    HTMLDivElement
-  >
-
-  // Root Svg Groups
-  rootSVGGroup!: d3BaseSelection
-
-  get getSVGRootConfig() {
-    return {
-      w: this.landingVisual?.nativeElement?.offsetWidth,
-      h: this.landingVisual?.nativeElement?.offsetHeight,
-    }
-  }
 
   ngAfterContentInit(): void {
 

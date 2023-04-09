@@ -1,0 +1,19 @@
+<div class="slide-bar">
+  <div class="slide-bar__menu">
+    <ul class="menu__ul">
+      <ng-container *ngFor="let menu of appMenu">
+        <li class="menu__li">
+          <a class=" menu__a fsr-18" (click)="onMenuClicked(menu)">{{ menu?.menuName }}</a>
+
+          <ul class="submenu__ul" [@collapseExpand]="!menu?.menuActivation ? 'collapsed' : 'expanded'">
+            <ng-container *ngFor="let subMenu of menu?.subMenu">
+              <li class="submenu__li">
+                <a class="submenu__a fsr-12" [class.submenu__activation]="subMenu?.menuActivation" (click)="onSubMenuItemClicked(menu,subMenu)">{{ subMenu?.menuName }}</a>
+              </li>
+            </ng-container>
+          </ul>
+        </li>
+      </ng-container>
+    </ul>
+  </div>
+</div>

@@ -7,3 +7,17 @@ export enum PlatFormClassesEnum {
   STICKY_RECT_CLASS = 'sticky_rect_class'
 
 }
+
+
+export interface Point {
+   x:number;
+   y:number;
+}
+
+export interface Dim {
+  width:number;
+  height:number;
+}
+
+
+export type Rect2D = Point & Dim;
